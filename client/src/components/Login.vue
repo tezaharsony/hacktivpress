@@ -62,8 +62,7 @@
 </template>
 
 <script>
-export default {
-  import { mapActions } from 'vuex'
+import { mapActions } from 'vuex'
   export default {
     data () {
       return {
@@ -79,8 +78,8 @@ export default {
       ])
     }
   }
-}
 </script>
+
 html,body {
   font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
   height: 100%;

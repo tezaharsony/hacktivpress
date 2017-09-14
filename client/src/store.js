@@ -1,11 +1,11 @@
 import vue from 'vue'
-import vuex from 'vuex'
+import Vuex from 'vuex'
 import axios from 'axios'
 import router from '@/router/index'
 
-vue.use(vuex)
+vue.use(Vuex)
 
-export default new.vuex.Store({
+export default new.Vuex.Store({
   state: {
     Login[]
   },
