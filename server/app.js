@@ -12,9 +12,11 @@ app.use(bodyParser.urlencoded({ extended: false }));
 
 const users = require('./Routers/Users');
 const login = require('./Routers/Auth');
+const article = require('./Routers/Articles');
 
 
 app.use('/api/users', users)
 app.use('/api/login', login)
+app.use('/article', article)
 
 app.listen(process.env.PORT || 3000)
