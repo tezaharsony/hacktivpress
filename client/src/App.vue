@@ -7,7 +7,6 @@
 <script>
 
 export default {
-  mode: 'history',
   name: 'app'
 }
 </script>

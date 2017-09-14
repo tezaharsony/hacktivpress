@@ -17,6 +17,6 @@ const article = require('./Routers/Articles');
 
 app.use('/api/users', users)
 app.use('/api/login', login)
-app.use('/api', article)
+app.use('/api/article', article)
 
 app.listen(process.env.PORT || 3000)

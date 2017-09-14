@@ -1,6 +1,6 @@
 <template lang="html">
   <body>
-    <div class="login-wrapper columns">
+    <div @submit.prevent='Login(dataLogin)' class="login-wrapper columns">
       <div class="column is-8 is-hidden-mobile hero-banner">
         <section class="hero is-fullheight is-dark">
           <div class="hero-body">
@@ -29,19 +29,19 @@
                   </h1>
                   <div class="login-form">
                     <p class="control has-icon has-icon-right">
-                      <input class="input email-input" type="text" placeholder="tezaharsony@example.org">
+                      <input v-model='dataLogin.name' class="input email-input" type="text" placeholder="tezaharsony@example.org">
                       <span class="icon user">
                         <i class="fa fa-user"></i>
                       </span>
                     </p>
                     <p class="control has-icon has-icon-right">
-                      <input class="input password-input" type="password" placeholder="●●●●●●●">
+                      <input v-model='dataLogin.password' class="input password-input" type="password" placeholder="●●●●●●●">
                       <span class="icon user">
                         <i class="fa fa-lock"></i>
                       </span>
                     </p>
                     <p class="control login">
-                      <button class="button is-success is-outlined is-large is-fullwidth">Login</button>
+                      <button type = "Submit" class="button is-success is-outlined is-large is-fullwidth">Login</button>
                     </p>
                   </div>
                   <div class="section forgot-password">
@@ -63,6 +63,22 @@
 
 <script>
 export default {
+  import { mapActions } from 'vuex'
+  export default {
+    data () {
+      return {
+        dataLogin: {
+          name: '',
+          password: ''
+        }
+      }
+    },
+    methods: {
+    ...mapActions([
+        'Login'
+      ])
+    }
+  }
 }
 </script>
 html,body {
